@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting to ChattUs</title>
+    <meta http-equiv="refresh" content="5;url=https://2b2df131-8a3e-48b1-977d-2def45b9fc2d-00-2khblmwrf105c.sisko.replit.dev/">
+    <style>
+        body {
+            background: radial-gradient(circle, #141e30, #243b55);
+            font-family: "Arial", sans-serif;
+            text-align: center;
+            color: white;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+            text-transform: uppercase;
+            opacity: 0;
+            animation: slideIn 1.5s ease-in forwards;
+            text-shadow: 0 0 10px #ffffff, 0 0 20px #00d4ff, 0 0 30px #00d4ff;
+        }
+        p {
+            font-size: 18px;
+            opacity: 0;
+            animation: slideIn 2s ease-in forwards;
+        }
+        .spinner {
+            margin: 20px auto;
+            width: 50px;
+            height: 50px;
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            border-top: 5px solid #00d4ff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to ChattUs</h1>
+    <p>You will be redirected in 5 seconds...</p>
+    <div class="spinner"></div>
+</body>
+</html>
