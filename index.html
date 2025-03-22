@@ -49,10 +49,25 @@
             to { transform: rotate(360deg); }
         }
     </style>
+    <script>
+        let countdown = 5; // Set the countdown starting time
+
+        function updateCountdown() {
+            document.getElementById("countdown").innerText = countdown;
+            countdown--;
+
+            if (countdown < 0) {
+                clearInterval(timer);
+                window.location.href = "https://2b2df131-8a3e-48b1-977d-2def45b9fc2d-00-2khblmwrf105c.sisko.replit.dev/";
+            }
+        }
+
+        let timer = setInterval(updateCountdown, 1000);
+    </script>
 </head>
 <body>
     <h1>Welcome to ChattUs</h1>
-    <p>You will be redirected in 5 seconds...</p>
+    <p>You will be redirected in <span id="countdown">5</span> seconds...</p>
     <div class="spinner"></div>
 </body>
 </html>
